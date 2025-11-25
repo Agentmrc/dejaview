@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DejaView</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🔹 Header / Logo + Title -->
+  <header class="siteheader">
+    <div class="brand">
+      <h1><img id="logo" src="logo.jpg" alt="DejaView logo"> DejaView</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔹 Matterport Embed -->
+  <div class="embed-wrap" id="embedWrap">
+    <div class="embed-inner">
+      <iframe
+        id="mpIframe"
+        src="https://my.matterport.com/show/?m=S72a5NHjMr7"
+        title="Matterport 3D Tour"
+        allow="xr-spatial-tracking; autoplay; encrypted-media; fullscreen"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- 🔹 Controls -->
+  <div class="controls">
+    <button class="btn" id="openFullscreen">Open Fullscreen</button>
+    <button class="btn" id="resetView">Reset View</button>
+  </div>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <div class="team-info">
+      <h3>About the Team</h3>
+      <p>DejaView is developed by a passionate team dedicated to delivering the next generation of immersive property experiences.</p>
+    </div>
+    <p class="copyright">© 2025 DejaView. All rights reserved.</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
