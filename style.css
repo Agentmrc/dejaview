@@ -8,10 +8,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 2vw;
+  text-align: center;
 }
 
 .siteheader {
-  padding: 12px 18px;
+  padding: 0vw;
   display: flex; 
   gap: 12px;
   background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
@@ -19,10 +21,26 @@ body {
   align-items: center;
 }
 
-header h1 {
+h1 {
+  font-family: "Science Gothic", sans-serif;
+  color:white;
+  font-size: 3vw;
+  margin: 0;
+  align-items: center;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  color:white;
+}
+
+h2{
+  font-family: "Google Sans Flex", sans-serif;
+  color: #000;
   font-size: 2vw;
   margin: 0;
   align-items: center;
+  padding: 1vw;
 }
 
 .navbar {
@@ -108,4 +126,94 @@ iframe {
 @media (max-width:600px){
   :root { --aspect: 75%; }
   header h1 { font-size: .95rem; }
+}
+
+.properties-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+
+.property-card {
+background: white;
+padding: 20px;
+width: 280px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.property-card img {
+width: 100%;
+border-radius: 10px;
+}
+
+.location {
+  font-family:"Ubuntu", sans-serif;
+  color: black;
+  font-size: 1.5vw;
+  margin-bottom: 5px;
+}
+
+
+.rating {
+  font-family:"Ubuntu", sans-serif;
+  color: orangered;
+  font-size: 1.5vw;
+  margin-bottom: 15px;
+}
+
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.tour-btn, .book-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+
+.tour-btn {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 1.25vw;
+  background-color: #007bff;
+  color: white;
+}
+
+
+.book-btn {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 1.25vw;
+  background-color: #28a745;
+  color: white;
+}
+
+.tour-btn:hover, .book-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.tour-btn:active, .book-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tour-btn:hover {
+  background-color: #0069d9;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
+}
+
+.book-btn:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.4);
 }
