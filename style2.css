@@ -1,0 +1,227 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0f172a;
+  --text-light: #e6eef8;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --accent: #22c55e;
+  --shadow: 0 0.6vw 1.5vw rgba(0,0,0,0.25);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  text-align: center;
+  padding: 1.2vw;
+}
+
+.siteheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8vw 3vw;
+}
+
+.brand h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  margin: 0;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 3vw;
+}
+
+#logo {
+  width: 3vw;
+  height: 3vw;
+}
+
+.navbar {
+  background: #1f2937;
+  padding: 0.5vw 1.4vw;
+  border-radius: 5vw;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+h1 {
+    font-family: "Science Gothic", sans-serif;
+  font-size: 3vw;
+  margin: 1.2vw 0 0.4vw;
+}
+
+p {
+  font-size: 1.75vw;
+  margin: 0 0 2vw;
+  color: #cbd5f5;
+}
+
+.properties-container {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  width: 26vw;              /* ⬅ bigger than 22vw */
+  padding: 1.6vw;           /* ⬅ more breathing room */
+  border-radius: 1.2vw;
+  box-shadow: var(--shadow);
+  text-align: center;
+  align-items: center; 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-0.3vw);
+  box-shadow: 0 1vw 2vw rgba(0,0,0,0.3);
+}
+
+.property-card img {
+  width: 100%;
+  border-radius: 0.8vw;
+  margin-bottom: 0.8vw;
+}
+
+.property-card h2 {
+  font-family: "Google Sans Flex", "Science Gothic", sans-serif;
+  font-size: 2.1vw;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  margin: 0.6vw 0 0.4vw;
+  line-height: 1.2;
+}
+
+.location {
+  font-size: 1.3vw;
+  color: #475569;
+  margin-bottom: 0.4vw;
+}
+
+.rating {
+  font-size: 1.3vw;
+  color: #f59e0b;
+  margin-bottom: 0.6vw;
+}
+
+.price {
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.8vw 0 1.2vw;
+}
+
+.price span {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center; 
+  gap: 0.6vw;
+}
+
+.tour-btn {
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 0.6vw 1vw;
+  border-radius: 0.6vw;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+.book-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6vw 1vw;
+  border-radius: 0.6vw;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 4vw;
+  }
+
+  .siteheader {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .brand h1 {
+    font-size: 6vw;
+  }
+
+  #logo {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .navbar a {
+    font-size: 4vw;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  .property-card {
+    width: 90vw;
+    padding: 5vw;
+  }
+
+  .property-card h2 {
+    font-size: 5vw;
+  }
+
+  .location,
+  .rating {
+    font-size: 4vw;
+  }
+
+  .price {
+    font-size: 6vw;
+  }
+
+  .price span {
+    font-size: 4vw;
+  }
+
+  .tour-btn,
+  .book-btn {
+    font-size: 4vw;
+    padding: 2.5vw;
+  }
+}

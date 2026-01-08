@@ -42,3 +42,55 @@ tours.forEach(tour => {
   }
 });
 
+const detailsPanel = document.getElementById("detailsPanel");
+const contactPanel = document.getElementById("contactPanel");
+
+document.getElementById("navDetails").addEventListener("click", () => {
+  detailsPanel.classList.toggle("open");
+  contactPanel.classList.remove("open");
+});
+
+document.getElementById("navContact").addEventListener("click", () => {
+  contactPanel.classList.toggle("open");
+  detailsPanel.classList.remove("open");
+});
+
+document.getElementById("navHome").addEventListener("click", () => {
+  detailsPanel.classList.remove("open");
+  contactPanel.classList.remove("open");
+});
+
+const panels = document.querySelectorAll('.info-panel');
+const overlay = document.getElementById('panelOverlay');
+
+// open panel helper
+function openPanel(panel) {
+  panels.forEach(p => p.classList.remove('open'));
+  panel.classList.add('open');
+  overlay.classList.add('active');
+}
+
+// close all panels
+function closePanels() {
+  panels.forEach(p => p.classList.remove('open'));
+  overlay.classList.remove('active');
+}
+
+// close button
+document.querySelectorAll('.panel-close').forEach(btn => {
+  btn.addEventListener('click', closePanels);
+});
+
+// overlay click
+overlay.addEventListener('click', closePanels);
+
+// navbar triggers (example)
+document.getElementById('navDetails').addEventListener('click', () => {
+  openPanel(document.getElementById('detailsPanel'));
+});
+
+document.getElementById('navContact').addEventListener('click', () => {
+  openPanel(document.getElementById('contactPanel'));
+});
+
+

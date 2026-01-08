@@ -4,36 +4,59 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8LSV4L61E"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-V8LSV4L61E');
-        </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF1P44GCJX"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/11/27/09/20251127095009-UJH3EBVW.js" defer></script>
+    
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MF1P44GCJX');
   </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DejaView</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="siteheader">
     <div class="brand">
       <h1><img id="logo" src="logo.jpg" alt="DejaView logo"> DejaView</h1>
     </div>
+
     <nav class="navbar">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" id="navHome">Home</a></li>
+        <li><a href="#" id="navDetails">Details</a></li>
+        <li><a href="#" id="navContact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- 🔹 Matterport Embed -->
+<div class="info-panel" id="detailsPanel">
+  <button class="panel-close" aria-label="Close panel">&times;</button>
+  <h2>Property Details</h2>
+  <p><strong>Size:</strong> 3050 sq ft</p>
+  <p><strong>Bedrooms:</strong> 0</p>
+  <p><strong>Bathrooms:</strong> 1</p>
+  <p><strong>Type:</strong> Hall</p>
+  <p><strong>Location:</strong> Johor Bahru</p>
+</div>
+
+<div class="panel-overlay" id="panelOverlay"></div>
+<div class="info-panel" id="contactPanel">
+  <button class="panel-close" aria-label="Close panel">&times;</button>
+  <h2>Contact Agent</h2>
+  <p><strong>Name:</strong> John Tan</p>
+  <p><strong>Phone:</strong> +60 12-345 6789</p>
+  <p><strong>Email:</strong> john@propertyagency.com</p>
+</div>
+
+
   <div class="embed-wrap" id="embedWrap">
     <div class="embed-inner">
       <iframe
@@ -47,6 +70,7 @@
     </div>
   </div>
 
+  <!-- 🔹 Controls -->
   <div class="controls">
     <button class="btn" id="openFullscreen">Open Fullscreen</button>
     <button class="btn" id="resetView">Reset View</button>
@@ -61,8 +85,6 @@
     <p class="copyright">© 2025 DejaView. All rights reserved.</p>
   </footer>
 
-  <!-- Link to external JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
